@@ -8,43 +8,35 @@
 body {
     background-color: rgb(67, 77, 73);
     font-family: 'Montserrat', sans-serif;
-}
-
-.titulo {
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    color: brown;
-    align-items: center;
-    padding: 80px;
+    height: 90%;
 }
 
 header {
-    background: rgb(0, 0, 0);
-    padding: 20px;
+
+    height: 150px;
+    width: 100%;
+    
     
 }
 
 header h1 img {
-    width: 160px;
-    margin:  auto;
+    width: 140px;
+    height: 130px;
+    left:  20%;
     
 }
 .home {
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
- 
+    width: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    
 }
 
 nav {
     position: absolute;
-    top: 110px;
-    right: 0;
+    top: 50px;
+    right: 10%;
 }
-
-
-
 
 nav li {
     display: inline;
@@ -65,12 +57,11 @@ nav a {
     border-width: 2px;
 }
 
-
 nav a:hover {
     background: black;
     text-decoration: underline;
     color: white;
-    transition: 0.6s;
+    transition: 0.3s;
 }
 
 p {
@@ -82,12 +73,16 @@ main p {
     text-align: center;
 }
 
+main{
+    margin-bottom: 8%;
+}
+
 .button-avancar {
     border-radius: 10px;
     padding: 10px;
     border-width: 2px;
     border-color: black;
-    margin-top: 20px;
+    margin: 2%;
 }
 
 
@@ -95,3 +90,21 @@ main p {
 .video {
     text-align: center;
 }
+
+footer {
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    /* position: fixed; */
+    width: 100%;
+    text-align: center;
+    background: black;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    padding: 40px;
+    
+}
+
