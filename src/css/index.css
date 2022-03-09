@@ -55,6 +55,8 @@ nav a {
     background: white;
     padding: 10px;
     border-width: 2px;
+    border: 4mm ridge white;
+    
 }
 
 nav a:hover {
@@ -62,6 +64,7 @@ nav a:hover {
     text-decoration: underline;
     color: white;
     transition: 0.3s;
+    box-shadow: 10px 5px 5px blue;
 }
 
 p {
