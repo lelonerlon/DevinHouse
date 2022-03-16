@@ -1,16 +1,32 @@
-var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-var alertTrigger = document.getElementById('liveAlertBtn')
+var botaoContato = document.getElementById("btn-header-contato");
 
+botaoContato.addEventListener("click", function () {
 
-function alert(message, type) {
-    var wrapper = document.createElement('div')
-    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    alert('Estamos em construção!', 'success')
 
-    alertPlaceholder.append(wrapper)
-}
+    event.preventDefault();
 
-if (alertTrigger) {
-    alertTrigger.addEventListener('click', function () {
-        alert('Parabéns!!!! Você clicou no botão!', 'success')
-    })
-}
+    return;
+});
+
+var botaoFoto = document.getElementById("btn-header-foto");
+
+botaoFoto.addEventListener("click", function () {
+
+    alert('Devido as retrições por conta do COVID, estamos sem eventos no momento.', 'success')
+
+    event.preventDefault();
+
+    return;
+}); 
+
+var botaoEvento =  document.getElementById("btn-header-evento");
+
+botaoEvento.addEventListener("click", function () {
+
+    alert('Devido as retrições por conta do COVID, estamos sem eventos no momento.', 'success')
+
+    event.preventDefault();
+
+    return;
+}); 
