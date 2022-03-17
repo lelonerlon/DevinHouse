@@ -36,6 +36,8 @@ var nome = document.getElementById("name");
 var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
 
+alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
+
 
 if (typedName == "") {
 
