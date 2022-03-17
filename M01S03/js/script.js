@@ -35,10 +35,10 @@ botaoEvento.addEventListener("click", function () {
 var nome = document.getElementById("name");
 var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
-var typedYearBirth = parseInt(prompt("Informe seu ano de nascimento!"));
-var typedCurrentYear = parseInt(prompt("Informe o ano atual"));
+// var typedYearBirth = parseInt(prompt("Informe seu ano de nascimento!"));
+// var typedCurrentYear = parseInt(prompt("Informe o ano atual"));
 
-alert("A sua idade é " + (typedCurrentYear - typedYearBirth) + " anos, ou " + ((typedCurrentYear - typedYearBirth) - 1) + " anos");
+// alert("A sua idade é " + (typedCurrentYear - typedYearBirth) + " anos, ou " + ((typedCurrentYear - typedYearBirth) - 1) + " anos");
 
 // alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
 
