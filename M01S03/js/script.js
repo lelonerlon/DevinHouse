@@ -33,12 +33,10 @@ botaoEvento.addEventListener("click", function () {
 
 
 var nome = document.getElementById("name");
-// var lastName = document.getElementById("last-name");
+var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
-// var typedLastName = prompt("Informe seu Sobrenome");
 
 
-// lastName.innerHTML = "";
 if (typedName == "") {
 
     typedName = "";
@@ -46,7 +44,7 @@ if (typedName == "") {
 }
 
 else {
-    nome.innerHTML = ("Bem vindo " + typedName);
+    nome.innerHTML = ("Bem vindo " + typedName+" "+typedLastName);
     // lastName.innerHTML = typedLastName; 
 }
 
