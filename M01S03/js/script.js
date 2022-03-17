@@ -35,9 +35,7 @@ botaoEvento.addEventListener("click", function () {
 var nome = document.getElementById("name");
 var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
-var data = new Date();
-var hora = data.getHours();
-var min = data.getMinutes();
+
 // var typedYearBirth = parseInt(prompt("Informe seu ano de nascimento!"));
 // var typedCurrentYear = parseInt(prompt("Informe o ano atual"));
 
@@ -45,7 +43,6 @@ var min = data.getMinutes();
 
 // alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
 
-alert(hora + ":" + min);
 
 if (typedName == "") {
 
