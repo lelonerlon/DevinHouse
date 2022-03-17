@@ -35,6 +35,9 @@ botaoEvento.addEventListener("click", function () {
 var nome = document.getElementById("name");
 var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
+var data = new Date();
+var hora = data.getHours();
+var min = data.getMinutes();
 // var typedYearBirth = parseInt(prompt("Informe seu ano de nascimento!"));
 // var typedCurrentYear = parseInt(prompt("Informe o ano atual"));
 
@@ -42,6 +45,7 @@ var typedName = prompt("Informe seu Nome");
 
 // alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
 
+alert(hora + ":" + min);
 
 if (typedName == "") {
 
@@ -53,29 +57,3 @@ else {
     nome.innerHTML = ("Bem vindo " + typedName + " " + typedLastName);
     // lastName.innerHTML = typedLastName; 
 }
-
-var botaoPesquisa = document.getElementById("btn-pesquisa");
-
-botaoPesquisa.addEventListener("click", function () {
-
-    var nomePesquisa = prompt("Informe o nome");
-    var idadePesquisa = parseInt(prompt("Informe sua idade"));
-    var atividadeFisica = confirm("Você pratica atividade fisica?");
-
-    if (atividadeFisica == true) {
-        atividadeFisica = "SIM";
-    }
-
-    else {
-        atividadeFisica = "NÃO"
-    }
-
-    var resultado = (nomePesquisa + " você está com " + idadePesquisa + " anos de Idade, e " + atividadeFisica + " pratica atividades fisica");
-
-    alert(resultado);
-
-
-    event.preventDefault();
-
-    return;
-});
