@@ -35,8 +35,12 @@ botaoEvento.addEventListener("click", function () {
 var nome = document.getElementById("name");
 var typedLastName = prompt("Informe seu Sobrenome");
 var typedName = prompt("Informe seu Nome");
+var typedYearBirth = parseInt(prompt("Informe seu ano de nascimento!"));
+var typedCurrentYear = parseInt(prompt("Informe o ano atual"));
 
-alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
+alert("A sua idade é " + (typedCurrentYear - typedYearBirth) + " anos, ou " + ((typedCurrentYear - typedYearBirth) - 1) + " anos");
+
+// alert("Olá " + typedLastName.toUpperCase() + ". Seu sobrenome contém" + typedLastName.length +" letras!")
 
 
 if (typedName == "") {
@@ -46,7 +50,7 @@ if (typedName == "") {
 }
 
 else {
-    nome.innerHTML = ("Bem vindo " + typedName+" "+typedLastName);
+    nome.innerHTML = ("Bem vindo " + typedName + " " + typedLastName);
     // lastName.innerHTML = typedLastName; 
 }
 
@@ -58,11 +62,11 @@ botaoPesquisa.addEventListener("click", function () {
     var idadePesquisa = parseInt(prompt("Informe sua idade"));
     var atividadeFisica = confirm("Você pratica atividade fisica?");
 
-    if (atividadeFisica == true){
+    if (atividadeFisica == true) {
         atividadeFisica = "SIM";
     }
 
-    else{
+    else {
         atividadeFisica = "NÃO"
     }
 
@@ -70,7 +74,7 @@ botaoPesquisa.addEventListener("click", function () {
 
     alert(resultado);
 
-    
+
     event.preventDefault();
 
     return;
