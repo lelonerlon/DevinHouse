@@ -18,9 +18,9 @@ botaoFoto.addEventListener("click", function () {
     event.preventDefault();
 
     return;
-}); 
+});
 
-var botaoEvento =  document.getElementById("btn-header-evento");
+var botaoEvento = document.getElementById("btn-header-evento");
 
 botaoEvento.addEventListener("click", function () {
 
@@ -29,7 +29,7 @@ botaoEvento.addEventListener("click", function () {
     event.preventDefault();
 
     return;
-}); 
+});
 
 
 var nome = document.getElementById("name");
@@ -37,8 +37,41 @@ var nome = document.getElementById("name");
 var typedName = prompt("Informe seu Nome");
 // var typedLastName = prompt("Informe seu Sobrenome");
 
-nome.innerHTML = "";
-// lastName.innerHTML = "";
 
-nome.innerHTML = ("Bem vindo " + typedName);
-// lastName.innerHTML = typedLastName; 
+// lastName.innerHTML = "";
+if (typedName == "") {
+
+    typedName = "";
+    nome.innerHTML = "";
+}
+
+else {
+    nome.innerHTML = ("Bem vindo " + typedName);
+    // lastName.innerHTML = typedLastName; 
+}
+
+var botaoPesquisa = document.getElementById("btn-pesquisa");
+
+botaoPesquisa.addEventListener("click", function () {
+
+    var nomePesquisa = prompt("Informe o nome");
+    var idadePesquisa = parseInt(prompt("Informe sua idade"));
+    var atividadeFisica = confirm("Você pratica atividade fisica?");
+
+    if (atividadeFisica == true){
+        atividadeFisica = "SIM";
+    }
+
+    else{
+        atividadeFisica = "NÃO"
+    }
+
+    var resultado = (nomePesquisa + " você está com " + idadePesquisa + " anos de Idade, e " + atividadeFisica + " pratica atividades fisica");
+
+    alert(resultado);
+
+    
+    event.preventDefault();
+
+    return;
+});
