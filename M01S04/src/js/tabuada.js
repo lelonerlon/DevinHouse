@@ -14,6 +14,6 @@ operando1.addEventListener('input', function () {
         arr.push(numeroFinal);
     }
 
-    document.querySelector("#resultado").innerHTML = JSON.stringify(arr);
+    document.querySelector("#resultado").textContent = JSON.stringify(arr);
   
 });
