@@ -33,12 +33,13 @@ var operando1 = document.querySelector("#primeiro-valor"),
 
 
 
-    operando2.addEventListener('input', function () {
+operando2.addEventListener('input', function () {
+
     var num1 = parseInt(operando1.value),
         num2 = parseInt(operando2.value);
-        selecao = select.value
-        
-        console.log(selecao)
+    selecao = select.value
+
+    console.log(selecao)
     switch (selecao) {
         case '1':
             resultado.textContent = (num1 + num2);
