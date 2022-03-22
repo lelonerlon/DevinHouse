@@ -17,10 +17,28 @@
             <nav></nav>
         </header>
         <main>
-            <label for="customRange2" class="form-label">Faixa de etária</label>
-            <input type="range" class="form-range" min="0" max="100" id="customRange2">
-            <span id="age"></span>
-            <span id="alert"></span>
+            <div class="row">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Primeiro Valor" aria-label="First name" id="primeiro-valor">
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                        <option selected>Operação...</option>
+                        <option value="1">+</option>
+                        <option value="2">-</option>
+                        <option value="3">*</option>
+                        <option value="4">/</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Segundo Valor" aria-label="Last name" id="segundo-valor">
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Resultado</span>
+                <textarea class="form-control" aria-label="With textarea" id="resultado"></textarea>
+            </div>
         </main>
         <footer></footer>
     </div>
