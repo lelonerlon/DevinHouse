@@ -1,4 +1,4 @@
-let cidades = [
+const cidades = [
     { nome: 'Patos de Minas', populacao: 153585 },
     { nome: 'Lages', populacao: 157349 },
     { nome: 'Ibiúna', populacao: 79479 },
@@ -6,17 +6,17 @@ let cidades = [
     { nome: 'Curitiba', populacao: 1963726 },
     { nome: 'Florianópolis', populacao: 508826 },
     { nome: 'Pato Branco', populacao: 84779 },
-],
-    cidadesGrandes = [];
+];
 
-cidadesGrandes = cidades.filter(function (cidade) {
-     return cidade.populacao > 200000;
+var cidadeEscolhida = [];
+
+cidadeEscolhida = cidades.filter(function (cidade) {
+    if (cidade.nome.toLowerCase() === 'Florianópolis'.toLowerCase()) {
+        return cidade;
+    }
+
+    return 0
+
 })
 
-// cidadesGrandes.reverse(function (a) {
-//     a.populacao >20000;
-// });
-
-console.log(cidadesGrandes)
-
-
+console.log(cidadeEscolhida)
