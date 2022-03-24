@@ -7,16 +7,17 @@ let cidades = [
     { nome: 'Florianópolis', populacao: 508826 },
     { nome: 'Pato Branco', populacao: 84779 },
 ],
-    cidadesGrandes = [];
+    cidadesGrandes = [],
+    cidadesOrdenadas = [];
 
 cidadesGrandes = cidades.filter(function (cidade) {
-     return cidade.populacao > 200000;
+    return cidade.populacao > 200000;
 })
 
-// cidadesGrandes.reverse(function (a) {
-//     a.populacao >20000;
-// });
+cidadesOrdenadas = cidadesGrandes.sort(function (a, b) {
+    if (a.populacao < b.populacao) return 1;
+    if (a.populacao > b.populacao) return -1;
+    return 0;
+})
 
 console.log(cidadesGrandes)
-
-
