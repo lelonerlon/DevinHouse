@@ -10,13 +10,15 @@ const cidades = [
 
 var cidadeEscolhida = [];
 
-cidadeEscolhida = cidades.filter(function (cidade) {
-    if (cidade.nome.toLowerCase() === 'Florianópolis'.toLowerCase()) {
-        return cidade;
-    }
+// cidadeEscolhida = cidades.filter(function (cidade) {
+//     if (cidade.nome.toLowerCase() === 'Florianópolis'.toLowerCase()) {
+//         return cidade;
+//     }
 
-    return 0
+//     return 0
 
-})
+// })
+
+cidadeEscolhida = cidades.filter((cidade) => cidade.nome.toLowerCase() === 'Florianópolis'.toLowerCase())
 
 console.log(cidadeEscolhida)
