@@ -8,17 +8,24 @@ class Produto {
 }
 
 class Pedidos {
-    constructor(numeroPedido, listaProdutos, nomeCliente) {
-        this.numeroPedido = numeroPedido;
-        this.dataPedido = new Date( ).toLocaleDateString( );
-        this.estaPago = false;
-        this.listaProdutos = listaProdutos;
-        this.nomeCliente = nomeCliente;
-
+    adicionarProduto(item) {
+        this.listaProdutos.push(item)
     }
-    get listaProduto(){
-        return this.listaProdutos
+    constructor(numeroPedido, nomeCliente) {
+        let arr = [];
+        this.numeroPedido = numeroPedido;
+        this.dataPedido = new Date().toLocaleDateString();
+        this.estaPago = false;
+        this.listaProdutos = arr;
+        this.nomeCliente = nomeCliente;
     }
 }
-const pedido1 = new Pedidos(12254,[''], 'Fulano de Tal')
+
+let numeroPedido = 12254;
+let nome = 'Fulano de Tal';
+
+
+const pedido1 = new Pedidos(numeroPedido, nome);
 console.log(pedido1);
+
+
