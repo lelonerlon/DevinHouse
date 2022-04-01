@@ -1,4 +1,4 @@
-export function saudacao(){
+export function saudacao() {
     return "Olá!"
 }
 
