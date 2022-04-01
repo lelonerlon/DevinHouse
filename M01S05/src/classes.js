@@ -1,4 +1,4 @@
-class Produto {
+export class Produto {
     constructor(nome, preco, emEstoque, quantidade) {
         this.nome = nome;
         this.preco = preco;
@@ -7,25 +7,26 @@ class Produto {
     }
 }
 
-class Pedidos {
+export class Pedidos extends Produto {
+
+
     adicionarProduto(item) {
         this.listaProdutos.push(item)
     }
+
+    calcularTotal() {
+        let totalPedido = 0;
+        this.listaProdutos.forEach(item => {
+            totalPedido += item.quantidade * item.preco;
+        });
+        return totalPedido;
+    }
     constructor(numeroPedido, nomeCliente) {
-        let arr = [];
         this.numeroPedido = numeroPedido;
         this.dataPedido = new Date().toLocaleDateString();
         this.estaPago = false;
-        this.listaProdutos = arr;
         this.nomeCliente = nomeCliente;
+        super(this.nome, this.preco, this.emEstoque, this.quantidade)
     }
 }
-
-let numeroPedido = 12254;
-let nome = 'Fulano de Tal';
-
-
-const pedido1 = new Pedidos(numeroPedido, nome);
-console.log(pedido1);
-
 
