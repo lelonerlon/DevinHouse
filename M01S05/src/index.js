@@ -16,17 +16,21 @@ const pedido1 = new Pedidos(20220001, 'Paulo');
 const pedido2 = new Pedidos(20220002, 'Pedro')
 
 //Incluindo os produtos aos pedidos 1
-const listaProduto = pedido1.adicionarProduto([produto1, produto2, produto3]);
-const totalPedido = pedido1.calcularTotal(pedido1.listaProdutos);
-console.log(listaProduto)
-console.log(totalPedido);
-console.log(`${pedido1.nomeCliente}, seu pedido foi gerado com o seguinte nº ${pedido1.numeroPedido} na data ${pedido1.dataPedido}, tem os seguintes itens: ${produto1.nome}, ${produto2.nome}, ${produto3.nome}`)
+const listaProduto = pedido1.adicionarProdutos(produto1, produto2, produto3);
+const totalPedido1 = pedido1.calcularTotal(pedido1.listaProdutos);
+
+console.log(`${pedido1.nomeCliente}, seu pedido foi gerado com o seguinte nº ${pedido1.numeroPedido} na data ${pedido1.dataPedido}, tem os seguintes itens: ${produto1.nome}, ${produto2.nome}, ${produto3.nome}. E o total do pedido foi ${totalPedido1}`)
 
 //Incluindo os produtos aos pedidos 2
-pedido2.adicionarProduto([produto4, produto5]);
-console.log(`${pedido2.nomeCliente}, seu pedido foi gerado com o seguinte nº ${pedido2.numeroPedido} na data ${pedido2.dataPedido}, tem os seguintes itens: ${produto4.nome}, ${produto5.nome}`)
+pedido2.adicionarProduto(produto4);
+pedido2.adicionarProduto(produto5);
+const totalPedido2 = pedido2.calcularTotal(pedido2.listaProdutos);
+console.log(`${pedido2.nomeCliente}, seu pedido foi gerado com o seguinte nº ${pedido2.numeroPedido} na data ${pedido2.dataPedido}, tem os seguintes itens: ${produto4.nome}, ${produto5.nome}. E o total do pedido foi ${totalPedido2}`)
+
+
+
 
 //Definindo intervalo para executar a função data
-setInterval(data, 2000);
+// setInterval(data, 2000);
 
-sleep('Este é o código')
+// sleep('Este é o código')

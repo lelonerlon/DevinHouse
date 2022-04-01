@@ -8,15 +8,20 @@ export class Produto {
 }
 
 export class Pedidos {
-    let 
+
     adicionarProduto(item) {
+
         this.listaProdutos.push(item)
+    }
+
+    adicionarProdutos(...produtosAdd) {
+        this.listaProdutos = [...this.listaProdutos, ...produtosAdd]
     }
 
     calcularTotal() {
         let totalPedido = 0;
         this.listaProdutos.forEach(item => {
-            totalPedido += item.quantidade * item.preco;
+            totalPedido = totalPedido + (item.quantidade * item.preco);
         });
         return totalPedido;
     }
@@ -24,8 +29,10 @@ export class Pedidos {
         this.numeroPedido = numeroPedido;
         this.dataPedido = new Date().toLocaleDateString();
         this.estaPago = false;
-        this.nomeCliente = nomeCliente;  
-        this.listaProdutos = [];    
+        this.nomeCliente = nomeCliente;
+        this.listaProdutos = [];
     }
 }
+
+
 
