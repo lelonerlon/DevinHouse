@@ -7,9 +7,8 @@ export class Produto {
     }
 }
 
-export class Pedidos extends Produto {
-
-
+export class Pedidos {
+    let 
     adicionarProduto(item) {
         this.listaProdutos.push(item)
     }
@@ -25,8 +24,8 @@ export class Pedidos extends Produto {
         this.numeroPedido = numeroPedido;
         this.dataPedido = new Date().toLocaleDateString();
         this.estaPago = false;
-        this.nomeCliente = nomeCliente;
-        super(this.nome, this.preco, this.emEstoque, this.quantidade)
+        this.nomeCliente = nomeCliente;  
+        this.listaProdutos = [];    
     }
 }
 
