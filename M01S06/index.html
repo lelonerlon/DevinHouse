@@ -13,13 +13,41 @@
 
 <body>
     <div class="container">
-    <h1 id="titulo">Título da página</h1>
-    <button id="btnAlterar" type="button" class="btn btn-primary">Alterar título</button>
-</div>
+        <h1 id="titulo">Calculadora Mágica</h1>
+        <form class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+                <input type="number" class="form-control" id="operador-1" placeholder="Operador 1">
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="operador-2" placeholder="Operador 2">
+                </div>
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="operacao">
+                    <option selected>Operação....</option>
+                    <option value="1">Soma</option>
+                    <option value="2">Divisão</option>
+                    <option value="3">Multiplicação</option>
+                    <option value="4">Divisão</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button id="btn-calcular" type="submit" class="btn btn-primary">Calcular</button>
+            </div>
+        </form>
+
+        <div class="input-group">
+            <span class="input-group-text">Resultado</span>
+            <textarea class="form-control" aria-label="With textarea" id="resultado"></textarea>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="./app/js/alterar.js"></script>
+    <script src="./app/js/calculadora.js"></script>
 </body>
 
 </html>
