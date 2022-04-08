@@ -1,14 +1,17 @@
+async function buscaCep(cep) {
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
+  const response = await fetch(url);
+  const formattedResponse = await response.json();
 
-  async  function pegarDadosProcessados(cep) {
-    const cep = document.getElementById('cep').ariaValueMax;
-    
-        return baixarDados(`https://viacep.com.br/ws/${cep}/json/`)
-          .catch(e => {
-            return baixarDadosReservas(url) // retorna uma Promise
-          })
-          .then(v => {
-            return processarDadosNoWorker(v); // retorna uma Promise
-          });
-      }
 
-      pegarDadosProcessados(cep)
+  // .then((resposta) => resposta.json())
+  // console.log(resultado);
+  return console.log(formattedResponse)
+}
+
+const botaoBuscar = document.getElementById("btn-buscar");
+botaoBuscar.addEventListener("click", function () {
+  const cepInformado = document.getElementById('cep').value;
+  const resultado = document.getElementById('resultado');
+  // resultado.innerHTML = buscaCep(cepInformado);
+}); 
