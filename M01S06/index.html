@@ -16,12 +16,18 @@
         <h1 id="titulo">Busca de CEP</h1>
         <form class="row gy-2 gx-3 align-items-center">
             <div class="col-auto">
-                <input type="text" class="form-control" id="cep" maxlength="8" placeholder="Informe o cep sem ponto e hífen">
+                <input type="text" class="form-control" id="uf" placeholder="Informe a UF" required>
             </div>
-
+            <div class="col-auto">
+                <input type="text" class="form-control" id="city"  placeholder="Cidade" required>
+            </div>            
+            <div class="col-auto">
+                <input type="text" class="form-control" id="logradouro"  placeholder="Informe o Logradouro" required>
+            </div>
             <div class="col-auto">
                 <button id="btn-buscar" type="button" class="btn btn-primary">Buscar CEP</button>
             </div>
+            
         </form>
 
         <div class="input-group">
