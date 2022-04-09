@@ -1,20 +1,19 @@
 import { fetchAPI, getAdress } from './buscar-cep.js';
 
-const botaoBuscar = document.getElementById("btn-buscar");
+const searchBtn = document.getElementById("btn-buscar");
 
-botaoBuscar.addEventListener("click", function () {
-  const cepInformado = document.getElementById('cep').value;
-  const resultado = document.getElementById('resultado');
-    let chave = 1
+searchBtn.addEventListener("click", function () {
+  const dataCEP = document.getElementById('cep').value;
+      let key = 1
 
-  if (cepInformado.length == 8 && chave == 1) {
-    getAdress(cepInformado);
-    chave = 0
-  } else if (cepInformado.length > 0 && cepInformado.length < 8 && chave == 1) {
+  if (dataCEP.length == 8 && key == 1) {
+    getAdress();
+    key = 0
+  } else if (dataCEP.length > 0 && dataCEP.length < 8 && key == 1) {
     alert('CEP Inválido!!!!!')
-    chave = 0;
+    key = 0;
   } else
     alert('Para realizar a pesquisa, o CEP precisa ser informado!');
-  chave = 0;
+    key = 0;
 
 }); 

@@ -1,5 +1,6 @@
 export const getAdress = async () => {
-  const data = await fetchAPI(40313360);
+  const dataCEP = document.getElementById('cep').value;
+  const data = await fetchAPI(dataCEP);
   console.log(data);
   if (data) {
     const adressList = document.getElementById('resultado');
