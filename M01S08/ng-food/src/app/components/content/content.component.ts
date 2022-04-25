@@ -19,11 +19,14 @@ export class ContentComponent implements OnInit {
     cardText: "As melhores bebidas podem ser desgustadas aqui",
     btnText: "Saiba mais",
     src:'https://minhasaude.proteste.org.br/wp-content/uploads/2019/12/74599606_m-970x472.jpg',
-  }
+  }];
 
-];
 
   constructor() { }
+
+  selectedCard(item:string){
+    alert(`Clicou no ${item}`)
+  }
 
   ngOnInit(): void {
   }
