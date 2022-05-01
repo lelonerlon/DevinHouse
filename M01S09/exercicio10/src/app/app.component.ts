@@ -8,8 +8,10 @@ import { Aluno, Nota } from 'src/assets/exercicio10'
 export class AppComponent extends Aluno {
   title = 'exercicio10';
   media: number = 0;
-  override passou: boolean = false;
   cadeira: string = "";
+
+  override passou: boolean = false;
+
 
   ngOnInit(): void {
     let aluno1: Aluno = new Aluno();
