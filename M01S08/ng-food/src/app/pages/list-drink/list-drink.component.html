@@ -1,1 +1,12 @@
-<p>list-drink works!</p>
+<div class="row">
+  <div *ngFor="let bebida of listaBebida" class="col">
+    <div class="card" style="width: 18rem">
+      <img src="{{ bebida.src }}" class="card-img-top" alt="Fotos de comidas" />
+      <div class="card-body">
+        <h5 class="card-title">{{ bebida.title }}</h5>
+        <p class="card-text">{{ bebida.descricao }}</p>
+        <a href="#" class="btn btn-primary">Adicionar ao pedido</a>
+      </div>
+    </div>
+  </div>
+</div>
