@@ -1,4 +1,6 @@
-export interface IComida {
-  title: string;
-  src: string;
+import { IBase } from "./base.model";
+
+export interface IComida extends IBase {
+  descricao: string,
+  valor: number,
 }

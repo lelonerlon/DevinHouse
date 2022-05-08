@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LISTA_COMIDAS_MOCK } from 'src/app/const/comida-model';
+import { IComida } from 'src/app/models/comida.model';
 
 @Component({
   selector: 'ngf-list-food',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-food.component.scss']
 })
 export class ListFoodComponent implements OnInit {
+
+  listaComida: IComida [] = LISTA_COMIDAS_MOCK;
 
   constructor() { }
 
