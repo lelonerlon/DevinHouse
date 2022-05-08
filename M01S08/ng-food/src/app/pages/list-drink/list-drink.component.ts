@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { LISTA_BEBIDAS_MOCK } from 'src/app/const/bebidas-mock';
 import { IBebida } from 'src/app/models/bebida.model';
 
 @Component({
@@ -9,11 +9,17 @@ import { IBebida } from 'src/app/models/bebida.model';
 })
 export class ListDrinkComponent implements OnInit {
 
-  listaBebida: IBebida [] = LISTA_BEBIDAS_MOCK;
+  listaBebida: IBebida[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+
+    this.http.get<IBebida[]>("http://localhost:3000/bebidas")
+    .subscribe((value: IBebida[]) =>  {
+
+        this.listaBebida = value;
+    });
   }
 
 }
