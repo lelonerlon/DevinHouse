@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IComida } from 'src/app/models/comida.model';
+import { IMenu } from 'src/app/models/menu.model';
+import { IBebida } from 'src/app/models/bebida.model';
+import { LISTA_BEBIDAS_MOCK } from 'src/app/const/bebidas-mock';
+import { LISTA_COMIDAS_MOCK } from 'src/app/const/comida-model';
+import { LIST_MENU_MOCK } from 'src/app/const/menu-mock';
 
 @Component({
   selector: 'ngf-content',
@@ -8,23 +13,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-    list = [{
-    title: "Cardápio de Comida",
-    cardText: "As melhores bebidas podem ser escolhidas aqui",
-    btnText: "Saiba mais",
-    src:'https://caminhoslanguages.com/wp-content/uploads/2020/04/traditional-brazilian-foods-1.jpg',
-  },
-  {
-    title: "Cardápio de Bebida",
-    cardText: "As melhores bebidas podem ser desgustadas aqui",
-    btnText: "Saiba mais",
-    src:'https://minhasaude.proteste.org.br/wp-content/uploads/2019/12/74599606_m-970x472.jpg',
-  }];
+  listMenu: IMenu[] = LIST_MENU_MOCK;
 
+  listaComidas: IComida[] = LISTA_COMIDAS_MOCK;
+
+  listaBebidas: IBebida[] = LISTA_BEBIDAS_MOCK;
 
   constructor() { }
 
-  selectedCard(item:string){
+  selectedCard(item: string) {
     alert(`Clicou no ${item}`)
   }
 
