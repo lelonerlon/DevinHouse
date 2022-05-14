@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'semana-11';
-  modeOn: boolean = false;
+
+  arraylist: string [] = [
+       'Bad Boys',
+       'Velozes e Furiosos',
+       'Alto da compadecida',
+       'Pinguim de Madagascar',
+       'Procurando Nemo'
+  ]
 }
