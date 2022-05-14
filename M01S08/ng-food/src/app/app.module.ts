@@ -9,12 +9,21 @@ import { ListFoodComponent } from './pages/list-food/list-food.component';
 import { ListDrinkComponent } from './pages/list-drink/list-drink.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Route, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
-const ROUTES: Route [] = [
+const ROUTES: Route[] = [
   {
-    path:'bebidas',
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'bebidas',
     component: ListDrinkComponent
+  },
+  {
+    path: 'comidas',
+    component: ListFoodComponent
   }
 ]
 @NgModule({
@@ -28,8 +37,9 @@ const ROUTES: Route [] = [
     HomeComponent
   ],
   imports: [
-    BrowserModule
-    // RouterModule.forRoot(ROUTES)
+    BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,11 @@
 {
-  "name": "ng-food",
+  "name": "semana-11",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "api": "json-server --watch db.json",
     "test": "ng test"
   },
   "private": true,
