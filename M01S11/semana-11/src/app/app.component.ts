@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'semana-11';
-  clicou: boolean = false;
+  modeOn: boolean = false;
 }
