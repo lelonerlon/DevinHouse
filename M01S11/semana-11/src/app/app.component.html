@@ -1,14 +1,15 @@
 <div class="container">
   <form #cadastro="ngForm" (submit)="showOptions()">
     <div class="row">
-      <label>Nome de Usuário: </label>
+      <label>Nome do dono: </label>
       <input
         type="text"
         class="form-control"
-        placeholder="username"
-        aria-label="name"
-        [(ngModel)]="user.name"
+        placeholder="Nome do Proprietário do PET"
+        aria-label="nameProp"
+        [(ngModel)]="user.nameProp"
         name="username"
+        required
       />
 
       <label>CPF: </label>
@@ -20,27 +21,39 @@
         [(ngModel)]="user.cpf"
         required
         name="cpf"
+        min="11"
+        max="11"
       />
-      <label>Dia do nascimento: </label>
+      <label>Email: </label>
       <input
-        type="number"
+        type="email"
         class="form-control"
-        placeholder="Dia de Nascimento"
-        aria-label="dia"
-        [(ngModel)]="user.date"
-        name="date"
-        min="1"
-        max="31"
+        placeholder="email@provedor.com.br"
+        aria-label="email"
+        [(ngModel)]="user.email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
       />
-      <label>Senha: </label>
+      <label>Nome do Pet: </label>
       <input
         type="text"
         class="form-control"
-        placeholder="Senha"
-        aria-label="senha"
-        [(ngModel)]="user.password"
+        placeholder="Nome do PET"
+        aria-label="namePet"
+        [(ngModel)]="user.namePet"
         required
         name="password"
+      />
+      <label>ID do Pet: </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Identificação do Pet"
+        aria-label="idPet"
+        [(ngModel)]="user.idPet"
+        required
+        name="idPet"
       />
       <button
         type="submit"

@@ -9,10 +9,11 @@ export class AppComponent {
   title = 'semana-11';
 
   user: any = {
-    name: '',
-    date: 0,
+    nameProp: '',
+    email: 0,
     cpf: 0,
-    password: '',
+    namePet: '',
+    idPet: 0,
   }
 
   isSubmit: boolean = false;
