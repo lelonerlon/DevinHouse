@@ -1,3 +1,12 @@
-<ul *ngFor="let item of arraylist">
-  <li> {{ item }}</li>
-</ul>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of arrayFotos" class="col">
+      <div class="card" style="width: 18rem">
+        <img src="{{ item.url }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
