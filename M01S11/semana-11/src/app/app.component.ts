@@ -8,11 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'semana-11';
 
-  showModal: boolean = true;
-  username: string = '';
-  date: number = 0;
-  cpf: number = 0;
-  password: any = '';
+  user: any = {
+    name: '',
+    date: 0,
+    cpf: 0,
+    password: '',
+  }
 
+  isSubmit: boolean = false;
+
+  showOptions() {
+    console.log('Username: ', this.user.name);
+    console.log('CPF: ', this.user.cpf);
+    console.log('Data: ', this.user.date);
+    console.log('Senha: ', this.user.password);
+  }
 
 }
