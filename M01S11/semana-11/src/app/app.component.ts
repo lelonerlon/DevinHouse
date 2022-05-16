@@ -18,11 +18,5 @@ export class AppComponent {
 
   showModal: boolean = false;
 
-  showOptions() {
-    console.log('Username: ', this.user.name);
-    console.log('CPF: ', this.user.cpf);
-    console.log('Data: ', this.user.date);
-    console.log('Senha: ', this.user.password);
-  }
 
 }
