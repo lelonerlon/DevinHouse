@@ -16,7 +16,7 @@ export class AppComponent {
     idPet: 0,
   }
 
-  isSubmit: boolean = false;
+  showModal: boolean = false;
 
   showOptions() {
     console.log('Username: ', this.user.name);
