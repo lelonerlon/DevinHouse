@@ -1,46 +1,84 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">FoodI</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            (click)="page = 'home'"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  (click)="page = 'preco'">Preço</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  (click)="page = 'info'">Informações</a>
-        </li>
-      </ul>
+
+<div class="container">
+  <form #cadastro="ngForm">
+    <div class="row">
+
+      <label>Nome do dono: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nome do Proprietário do PET"
+        aria-label="nameProp"
+        [(ngModel)]="user.nameProp"
+        name="username"
+        required
+      />
+
+      <label>CPF: </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="CPF"
+        aria-label="CPF"
+        [(ngModel)]="user.cpf"
+        required
+        name="cpf"
+        minlength="11"
+      />
+
+      <label>Email: </label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="email@provedor.com.br"
+        aria-label="email"
+        [(ngModel)]="user.email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
+      />
+      <label>Nome do Pet: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nome do PET"
+        aria-label="namePet"
+        [(ngModel)]="user.namePet"
+        required
+        name="password"
+      />
+
+      <label>ID do Pet: </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Identificação do Pet"
+        aria-label="idPet"
+        [(ngModel)]="user.idPet"
+        required
+        name="idPet"
+      />
+
+      <button
+        type="submit"
+        style="width: 100px; margin-top: 10px"
+        [disabled]="!cadastro.valid"
+        (click)="showModal = !showModal"
+      >
+        Enviar
+      </button>
+
     </div>
   </div>
-</nav>
 
-<div [ngSwitch]="page">
-  <div *ngSwitchDefault>
-    <h2>Estou na página de Home</h2>
-  </div>
-  <div *ngSwitchCase="'preco'">
-    <h2>Estou na página de Preços</h2>
-  </div>
-  <div *ngSwitchCase="'info'">
-    <h2>Estou na página de Informações</h2>
+
+
+<div *ngIf="showModal" class="modal">
+  <div class="modal__content">
+    <h1>Recibo</h1>
+    <p>Eu {{ user.nomeProp }} portador do CPF {{ user.cpf }}, declaro estar ciente sobre as eventuais despesas refeerente a consulta do PET {{ user.namePet }}, ID: {{ user.idPet }}.
+      E concordo em receber uma cópia através do email {{ user.email }}
+    </p>
+    <a (click)="showModal = !showModal" class="modal__close">&times;</a>
   </div>
 </div>

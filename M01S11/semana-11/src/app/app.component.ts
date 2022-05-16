@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'semana-11';
 
- page: string = '';
+  
+  user: any = {
+    nameProp: '',
+    email: 0,
+    cpf: 0,
+    namePet: '',
+    idPet: 0,
+  }
+
+  showModal: boolean = false;
+
 
 }
