@@ -1,10 +1,11 @@
 ﻿namespace GeraEstoque;
 
-class Program
+class Menu
 {
     static void Main(string[] args)
     {
-        
     }
 
 }
+
+
