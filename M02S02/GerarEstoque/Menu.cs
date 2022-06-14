@@ -17,7 +17,7 @@ internal class Menu
         switch (option)
         {
             case 1:
-                CadastrarProduto();
+                Produto.Cadastrar();
                 break;
             case 2:
                 Console.Clear();

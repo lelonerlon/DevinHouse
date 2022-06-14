@@ -24,6 +24,27 @@ public class Produto
         Console.SetCursorPosition(2, 6);
         Console.WriteLine("Valor de Venda: ");
         var valorVenda = Console.ReadLine();
+        Random numAleatorio = new Random();
+        var id = numAleatorio.Next();
+        Console.WriteLine(nome);
+
+        Sucesso(id, nome, quantidade, valorCompra, valorVenda);
 
     }
+
+    private static void Sucesso(int? id, string? nome, string? quantidade, string? valorCompra, string? valorVenda)
+    {
+        Console.Clear();
+        Console.WriteLine("Produto Cadastrado com sucesso!");
+        Console.WriteLine("ID: " + id);
+        Console.WriteLine("Nome: " + nome);
+        Console.WriteLine("Qtd: " + quantidade);
+        Console.WriteLine("R$ Compra: " + valorCompra);
+        Console.WriteLine("R$ Venda: " + valorVenda);
+
+        Console.WriteLine("Pressione, qualquer tecla para retonar ao menu");
+        Console.ReadLine();
+        Menu.Show();
+    }
+
 }
