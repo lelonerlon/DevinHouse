@@ -1,0 +1,15 @@
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.csproj.AssemblyReference.cache
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.AssemblyInfoInputs.cache
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.AssemblyInfo.cs
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.csproj.CoreCompileInputs.cache
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\bin\Debug\net6.0\GerarEstoque.exe
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\bin\Debug\net6.0\GerarEstoque.deps.json
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\bin\Debug\net6.0\GerarEstoque.runtimeconfig.json
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\bin\Debug\net6.0\GerarEstoque.dll
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\bin\Debug\net6.0\GerarEstoque.pdb
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.dll
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\refint\GerarEstoque.dll
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.pdb
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\GerarEstoque.genruntimeconfig.cache
+C:\Users\lelon\Documents\DevinHouse\M02S02\GerarEstoque\obj\Debug\net6.0\ref\GerarEstoque.dll
