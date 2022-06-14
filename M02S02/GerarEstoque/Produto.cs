@@ -42,6 +42,9 @@ public class Produto
         Console.WriteLine("R$ Compra: " + valorCompra);
         Console.WriteLine("R$ Venda: " + valorVenda);
 
+        Console.WriteLine("Pressione, qualquer tecla para retonar ao menu");
+        Console.ReadLine();
+        Menu.Show();
     }
 
 }
