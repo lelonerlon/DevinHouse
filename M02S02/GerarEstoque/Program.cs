@@ -1,10 +1,12 @@
-﻿namespace GeraEstoque;
+﻿using GerarEstoque.Screens;
+
+namespace GeraEstoque;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Menu.Show();
+        MenuScreen.Iniciar();
     }
 
 }
