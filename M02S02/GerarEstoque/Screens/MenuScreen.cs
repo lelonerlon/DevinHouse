@@ -18,7 +18,8 @@ namespace GerarEstoque.Screens
             switch (option)
             {
                 case 1:
-                    Produto.Cadastrar();
+                    CriarProdutoScreen.Iniciar(); 
+                    Iniciar();
                     break;
                 case 2:
                     Console.Clear();
@@ -32,7 +33,7 @@ namespace GerarEstoque.Screens
                     Console.Clear();
                     Environment.Exit(0);
                     break;
-                case 0:
+                case     0:
                     {
                         Console.Clear();
                         Environment.Exit(0);
@@ -92,9 +93,6 @@ namespace GerarEstoque.Screens
             Console.Write("+");
             Console.Write(Environment.NewLine);
         }
-        static void CadastrarProduto()
-        {
-            Console.WriteLine("Cadastrar Produto");
-        }
+        
     }
 }
