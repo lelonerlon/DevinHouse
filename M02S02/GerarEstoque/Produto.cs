@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GerarEstoque.Screens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +45,7 @@ public class Produto
 
         Console.WriteLine("Pressione, qualquer tecla para retonar ao menu");
         Console.ReadLine();
-        Menu.Show();
+        MenuScreen.Iniciar();
     }
 
 }
