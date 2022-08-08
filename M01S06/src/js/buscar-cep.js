@@ -3,23 +3,25 @@ export const getAdress = async () => {
   const dataCity = document.getElementById('city').value;
   const dataStreet = document.getElementById('logradouro').value;
   const data = await fetchApiAll(dataState, dataCity, dataStreet);
-  console.log(data);
-  let adressList = document.getElementById('resultado');
+  
+  
   if (data) {
     data.forEach((dado) => {
+      const adressList = document.getElementById('endereco');
       const el = document.createElement('p')
-      el.textContent = `
+      el.textContent = (`
       Logradouro: ${dado.logradouro}
       Bairro: ${dado.bairro}
       Complemento: ${dado.complemento}
       Cep: ${dado.cep}
       Ddd: ${dado.ddd}
       Ibge: ${dado.ibge}
-      Cidade: ${dado.localidade}
+      Cidade: ${dado.localidade} x
       UF: ${dado.uf}
-      `;
+      `);
       adressList.appendChild(el);
     });
+
   } if (data.length === 0) {
     adressList.innerHTML = ('Nenhum registro foi encontrado');
   }
@@ -60,10 +62,6 @@ export async function fetchApiAll(state, city, street) {
   return alert('No momento estamos sem comunicação com a API');
 
 }
-
-
-
-
 
 
 

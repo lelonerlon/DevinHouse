@@ -1,11 +1,84 @@
-<div class="container" [ngStyle]=" {'backgroundColor': modeOn ? 'black': 'white'}">
-  <div class="content">
-    <h1>Example dark mode</h1>
-    <h3>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus autem unde
-      recusandae vero porro fuga velit. Aut labore deleniti magnam libero
-      quibusdam in est vitae ea unde. Possimus, odio aliquam?
-    </h3>
+
+<div class="container">
+  <form #cadastro="ngForm">
+    <div class="row">
+
+      <label>Nome do dono: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nome do Proprietário do PET"
+        aria-label="nameProp"
+        [(ngModel)]="user.nameProp"
+        name="username"
+        required
+      />
+
+      <label>CPF: </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="CPF"
+        aria-label="CPF"
+        [(ngModel)]="user.cpf"
+        required
+        name="cpf"
+        minlength="11"
+      />
+
+      <label>Email: </label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="email@provedor.com.br"
+        aria-label="email"
+        [(ngModel)]="user.email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
+      />
+      <label>Nome do Pet: </label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nome do PET"
+        aria-label="namePet"
+        [(ngModel)]="user.namePet"
+        required
+        name="password"
+      />
+
+      <label>ID do Pet: </label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Identificação do Pet"
+        aria-label="idPet"
+        [(ngModel)]="user.idPet"
+        required
+        name="idPet"
+      />
+
+      <button
+        type="submit"
+        style="width: 100px; margin-top: 10px"
+        [disabled]="!cadastro.valid"
+        (click)="showModal = !showModal"
+      >
+        Enviar
+      </button>
+
+    </div>
   </div>
-  <button class="card card-small" (click)="modeOn= !modeOn">Dark mode</button>
+
+
+
+<div *ngIf="showModal" class="modal">
+  <div class="modal__content">
+    <h1>Recibo</h1>
+    <p>Eu {{ user.nomeProp }} portador do CPF {{ user.cpf }}, declaro estar ciente sobre as eventuais despesas refeerente a consulta do PET {{ user.namePet }}, ID: {{ user.idPet }}.
+      E concordo em receber uma cópia através do email {{ user.email }}
+    </p>
+    <a (click)="showModal = !showModal" class="modal__close">&times;</a>
+  </div>
 </div>
